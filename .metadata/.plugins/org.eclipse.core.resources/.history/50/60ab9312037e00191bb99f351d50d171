@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<context:component-scan base-package="com.xworkz.tourism"></context:component-scan>
+
+<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/view/"></property>
+<property name="suffix" value=".jsp"></property>
+
+</bean>
+
+<bean id="pleceHolder" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<property name="locations" value="WEB-INF/classes/resources/DBConnection.properties"></property>
+	</bean>
+	
+	<bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<property name="driverClassName" value="${spring.driverClassName}"></property>
+	<property name="url" value="${spring.url}"></property>
+	<property name="username" value="${spring.username}"></property>
+	<property name="password" value="${spring.password}"></property>
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+	<property name="dataSource" ref="datasource"></property>
+	
+	<property name="annotatedClasses">
+			<list>
+			<value>${spring.annotatedClasses}</value>
+			<value>${spring.searchAnnotatedClasses}</value>
+			</list>
+		</property>
+		
+		<property name="hibernateProperties">
+		<props>
+		<prop key="hibernate.show_sql">true</prop>
+		<prop key="hibernate.format_sql">true</prop>
+		</props>
+		</property>
+	</bean> 
+
+
+
+</beans>

@@ -1,0 +1,13 @@
+package com.xworkz.hackathon.dao;
+
+import com.xworkz.hackathon.dto.HackathonDTO;
+
+public class HackathonDAO implements IHackathonDAO {
+
+	@Override
+	public Integer savePartyInfo(HackathonDTO dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

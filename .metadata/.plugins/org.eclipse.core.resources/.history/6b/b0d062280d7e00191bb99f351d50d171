@@ -1,0 +1,21 @@
+package com.xworkz.hackathon.dao;
+
+import org.springframework.stereotype.Repository;
+
+import com.xworkz.hackathon.dto.HackathonDTO;
+
+@Repository
+public class HackathonDAO implements IHackathonDAO {
+	
+	
+	public HackathonDAO() {
+		System.out.println("Object created \t"+this.getClass().getSimpleName());
+	}
+
+	@Override
+	public Integer savePartyInfo(HackathonDTO dto) {
+		System.out.println("invoked into savePartyInfo() from dto");
+		return null;
+	}
+
+}

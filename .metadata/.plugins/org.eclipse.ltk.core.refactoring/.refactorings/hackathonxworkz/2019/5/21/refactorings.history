@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;hackathonxworkz/src/com/xworkz/hackathon/dao/IHackathondao.java&apos; to &apos;IHackathonDAO.java&apos;" description="Rename resource &apos;IHackathondao.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/xworkz/hackathon/dao/IHackathondao.java" name="IHackathonDAO.java" stamp="1558685281560" updateReferences="true"/>
+</session>

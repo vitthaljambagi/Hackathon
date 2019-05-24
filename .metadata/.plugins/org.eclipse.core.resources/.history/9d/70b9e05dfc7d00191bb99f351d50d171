@@ -1,0 +1,15 @@
+package com.xworkz.hackathon.service;
+
+import com.xworkz.hackathon.dto.HackathonDTO;
+
+public class HackathonService {
+	
+	public HackathonService() {
+		System.out.println("Object created for service \t"+this.getClass().getSimpleName());
+	}
+
+	public void isValidation(HackathonDTO dto) {
+		System.out.println("invoked into isValidation() from HackathonDTO");
+	}
+	
+}

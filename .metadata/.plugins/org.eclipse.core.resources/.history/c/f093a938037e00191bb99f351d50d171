@@ -1,0 +1,21 @@
+package com.xworkz.hackathon.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.xworkz.hackathon.dto.HackathonDTO;
+
+@Controller
+public class HackathonController {
+	
+	public HackathonController() {
+		System.out.println("Object created \t"+this.getClass().getSimpleName());
+	}
+	@RequestMapping("/partyDetails")
+	public String userdata(HackathonDTO dto) {
+		System.out.println("Object created \t"+this.getClass().getSimpleName());
+		System.out.println("invoked uderData() from HackathonDto "+dto);
+		return "Hackathon.jsp";
+	}
+	
+}

@@ -1,0 +1,10 @@
+package com.xworkz.hackathon.dao;
+
+import com.xworkz.hackathon.dto.HackathonDTO;
+
+public interface IHackathonDAO {
+	
+	public Integer savePartyInfo(HackathonDTO dto);
+
+
+}

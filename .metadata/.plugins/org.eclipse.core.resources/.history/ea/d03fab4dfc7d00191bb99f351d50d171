@@ -1,0 +1,17 @@
+package com.xworkz.hackathon.controller;
+
+import com.xworkz.hackathon.dto.HackathonDTO;
+
+public class HackathonController {
+	
+	public HackathonController() {
+		System.out.println("Object created \t"+this.getClass().getSimpleName());
+	}
+	
+	public String userdata(HackathonDTO dto) {
+		System.out.println("Object created \t"+this.getClass().getSimpleName());
+		System.out.println("invoked uderData() from HackathonDto "+dto);
+		return "Hackathon.jsp";
+	}
+	
+}
